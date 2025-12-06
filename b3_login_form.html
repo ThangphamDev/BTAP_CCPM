@@ -38,5 +38,27 @@
         </div>
     </div>
 
+    <script>
+        function login() {
+            // Get values from input fields
+            const username = document.getElementById("txtUsername").value;
+            const password = document.getElementById("txtPassword").value;
+            
+            // Validate input
+            if (username === "" || password === "") {
+                alert("Vui lòng nhập tên đăng nhập và mật khẩu!");
+                return;
+            }
+            
+            // Check credentials (username=admin, password=admin)s
+            if (username === "admin" && password === "admin") {
+                alert("Đăng nhập thành công!");
+                // Redirect to success page or dashboard
+                // window.location.href = "dashboard.html";
+            } else {
+                alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
+            }
+        }
+    </script>
 </body>
 </html>
